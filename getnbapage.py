@@ -7,16 +7,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 tsd = pd.DataFrame()
-Path = 'D:/Python/chromedriver.exe'
+# enter path to your selenium chrome driver
+Path = 'D:/chromedriver.exe'
 driver = webdriver.Chrome(executable_path = Path)
-#link for opponent shooting by zone
-# link = 'https://stats.nba.com/teams/opponent-shooting/?Season=2019-20&SeasonType=Regular%20Season&DistanceRange=By%20Zone'
-#link for team shooting by zone
-#link = 'https://www.nba.com/stats/players/advanced/?sort=PLAYER_NAME&dir=-1&Season=2020-21&SeasonType=Regular%20Season'
-# link = 'https://www.nba.com/stats/players/bio/?Season=2020-21&SeasonType=Regular%20Season'
+# link for the page you want to scrape data from
 
-# pergame shooitng by zone
-# link = 'https://www.nba.com/stats/players/shooting/'
+
 
 # season total shooting by zone
 link = 'https://www.nba.com/stats/players/shooting/?Season=2020-21&SeasonType=Regular%20Season&PerMode=Totals'
@@ -121,11 +117,5 @@ def get_rep_title_axis(dfname):
 df = df.drop(index = get_rep_title_axis(df)).reset_index()
 df = df.drop(columns = ['index'])
 
-
-print(df.head(10))
-
-#df = df.drop(columns = [['blank','bl']], inplace=True)
-#print(df.head(20))
-#df = df.drop(columns = [['blank','bl']], inplace=True)
-# df.to_csv('D:/Python/NBA/data/20-21_player_bio.csv')
-df.to_csv('D:/Python/nba2020/nba20-21_shooting_by_5ft.2021.5.2.csv')
+# export file
+df.to_csv()
