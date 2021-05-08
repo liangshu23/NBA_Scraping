@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-tsd = pd.DataFrame()
 # enter path to your selenium chrome driver
 Path = 'D:/chromedriver.exe'
 driver = webdriver.Chrome(executable_path = Path)
