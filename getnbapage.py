@@ -11,8 +11,6 @@ Path = 'D:/chromedriver.exe'
 driver = webdriver.Chrome(executable_path = Path)
 # link for the page you want to scrape data from
 
-
-
 # season total shooting by zone
 link = 'https://www.nba.com/stats/players/shooting/?Season=2020-21&SeasonType=Regular%20Season&PerMode=Totals'
 
@@ -29,18 +27,12 @@ except:
 element = driver.find_element_by_id('onetrust-accept-btn-handler')
 element.click()
 time.sleep(1.5)
-# source = bs.BeautifulSoup(driver.page_source, 'html.parser').find('table')
-# whole = [b for b in source.find_all('tr')]
-# whole_text = [b.text() for b in source.find_all('tr')]
+
 
 # criteria = '<tr ng-repeat'
 criteria = '<tr aria-hidden="false"'
 
 temp = []
-# print(whole)
-# print(len(whole))
-
-# print(whole_text)
 
 def scrapepage():
     source = bs.BeautifulSoup(driver.page_source, 'html.parser').find('table')
