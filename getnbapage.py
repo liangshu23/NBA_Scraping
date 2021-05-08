@@ -52,9 +52,9 @@ def scrapepage():
             #print(row_text)
             row_text = row_text.replace('\xa0', '')
             #print(row_text)
-            team_data = row_text.split(',')
+            row_text = row_text.split(',')
             #print(team_data)
-            temp.append(team_data)
+            temp.append(row_text)
 
 
 def nextpage():
