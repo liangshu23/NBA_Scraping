@@ -63,8 +63,9 @@ def nextpage():
     next.click()
     driver.implicitly_wait(2)
     print('moving to next page')
-    # new_url = driver.current_url
-
+    
+    
+#looping through all pages
 for i in range (0,11):
     scrapepage()
     nextpage()
