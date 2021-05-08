@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 # enter path to your selenium chrome driver
-Path = 'D:/chromedriver.exe'
+Path = 'D:/____________/chromedriver.exe'
 driver = webdriver.Chrome(executable_path = Path)
 # link for the page you want to scrape data from
 
